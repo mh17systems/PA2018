@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		<property name="dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="hibernate.connection.CharSet">UTF-8</property>
+        <property name="hibernate.connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.useUnicode">true</property>
+			
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/smith?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false
+		</property>
+		<property name="connection.username">rooot</property>
+		<property name="connection.password">rooot</property>
+		
+		<property name="hibernate.show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">false</property>
+        
+		<mapping class="mx.smithseguros.ComunicacionSmith.web.hibernate.Usuario"/>
+		<mapping class="mx.smithseguros.ComunicacionSmith.web.hibernate.Folio" />
+		
+	</session-factory>
+
+</hibernate-configuration>

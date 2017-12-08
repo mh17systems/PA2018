@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+#loginBody{
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-left: 3%;
+	padding-right:3%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0d1142+36,2989d8+51,111051+69 */
+background: rgb(13,17,66); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, rgba(13,17,66,1) 36%, rgba(41,137,216,1) 51%, rgba(17,16,81,1) 69%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(13,17,66,1) 36%,rgba(41,137,216,1) 51%,rgba(17,16,81,1) 69%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(13,17,66,1) 36%,rgba(41,137,216,1) 51%,rgba(17,16,81,1) 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d1142', endColorstr='#111051',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.container{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f5f6+0,e3eaed+37,c8d7dc+100;Grey+3D+%234 */
+background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+.card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+58,80c217+69,7cbc0a+100 */
+background: #9dd53a; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #9dd53a 0%, #a1d54f 58%, #80c217 69%, #7cbc0a 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #9dd53a 0%,#a1d54f 58%,#80c217 69%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #9dd53a 0%,#a1d54f 58%,#80c217 69%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/*
+ * Form styles
+ */
+.profile-name-card {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 0;
+    min-height: 1em;
+}
+
+.reauth-email {
+    display: block;
+    color: #404040;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin #inputEmail,
+.form-signin #inputPassword {
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+}
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: black;
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: white;
+    color:black;
+}
+
+.forgot-password {
+    color: black;
+}
+
+.forgot-password:hover,
+.forgot-password:active,
+.forgot-password:focus{
+    color: red;
+}
+
+#tabFolios,  #celTabFolios{
+   border: 1px solid black;
+   text-align: center;
+}
+#tabFolios{
+	width: 100%;
+}
+
+tr,th,td{
+	border: 1px solid black;
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* A simple, css only, (some-what) responsive menu */
+
+body { 
+  background: #ccc;
+  font-family: helvetica, arial, serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+}
+ 
+.wrap {
+  display: inline-block;
+  -webkit-box-shadow: 0 0 70px #fff;
+  -moz-box-shadow: 0 0 70px #fff;
+  box-shadow: 0 0 70px #fff;
+  margin-top: 10px;
+  width: 100%;
+  
+}
+
+/* a little "umph" */
+.decor {
+  background: #6EAF8D;
+  background: -webkit-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: -moz-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: -o-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+  background: linear-gradient(left, white 50%, #6EAF8D 50%);
+  background-size: 50px 25%;;
+  padding: 2px;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+li {
+  float: left;
+}
+
+/* clear'n floats */
+ul:after {
+  clear: both;
+}
+
+ul:before,
+ul:after {
+    content: " ";
+    display: table;
+}
+
+nav {
+  position: relative;
+  
+  background-image: -webkit-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -o-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background: black;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #0E0E0E;
+  -webkit-box-shadow: 2px 2px 3px #888;
+  -moz-box-shadow: 2px 2px 3px #888;
+  box-shadow: 2px 2px 3px #888;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* prime */
+ul.primary li a {
+  display: block;
+  padding: 20px 30px;
+  border-right: 1px solid #3D3D3D;
+}
+
+ul.primary li:last-child a {
+  border-right: none;
+}
+
+ul.primary li a:hover {
+  
+  color: #000;
+}
+
+/* subs */
+ul.sub {
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 0 #BEBEBE;
+  width: 35%;
+  display:none;
+}
+
+ul.sub li {
+  float: none;
+  margin: 0;
+}
+
+ul.sub li a {
+  border-bottom: 1px dotted #ccc;
+  border-right: none;
+  color: #000;
+  padding: 15px 30px;
+}
+
+ul.sub li:last-child a {
+  border-bottom: none;
+}
+
+ul.sub li a:hover {
+  color: #000;
+  background: #eeeeee;
+}
+
+/* sub display*/
+ul.primary li:hover ul {
+  display: block;
+  background: #fff;
+}
+
+/* keeps the tab background white */
+ul.primary li:hover a {
+  background: #fff;
+  color: #666;
+  text-shadow: none;
+}
+
+ul.primary li:hover > a{
+  color: #000;
+} 
+
+@media only screen and (max-width: 600px) {
+  .decor {
+    padding: 3px;
+  }
+  
+  .wrap {
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+   li {
+    float: none;
+  }
+  
+  ul.primary li:hover a {
+    background: none;
+    color: #8B8B8B;
+    text-shadow: 1px 1px #000;
+  }
+
+  ul.primary li:hover ul {
+    display: block;
+    background: #272727;
+    color: #fff;
+  }
+  
+  ul.sub {
+    display: block;  
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+  
+  ul.sub li a {
+    background: #272727;
+  	border: none;
+    color: #8B8B8B;
+  }
+  
+  ul.sub li a:hover {
+    color: #ccc;
+    background: none;
+  }
+}
+
+#bloqueado{
+	display:none;
+}

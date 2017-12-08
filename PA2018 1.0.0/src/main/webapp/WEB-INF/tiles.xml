@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="/WEB-INF/paginas/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="body" value="" />
+    </definition>
+    
+    <definition name="home.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Comunicación Smith" />
+        <put-attribute name="body" value="/WEB-INF/paginas/menuFolios.jsp" />
+    </definition>
+    
+    <definition name="cambiopassword.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Cambio de password" />
+        <put-attribute name="body" value="/WEB-INF/paginas/cambio-passwd.jsp" />
+    </definition>
+    
+    <definition name="menuFolios.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Menú de Folios" />
+        <put-attribute name="body" value="/WEB-INF/paginas/menuFolios.jsp" />
+    </definition>
+    
+    <definition name="menuFoliosDetalles.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Menú de Folios" />
+        <put-attribute name="body" value="/WEB-INF/paginas/menuFoliosDetalles.jsp" />
+    </definition>
+    
+    <definition name="altaUsuario.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Alta de Usuario" />
+        <put-attribute name="body" value="/WEB-INF/paginas/registro.jsp" />
+    </definition>
+    
+    <definition name="crearTicket.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Crear Folio" />
+        <put-attribute name="body" value="/WEB-INF/paginas/createTicket.jsp" />
+    </definition>
+    <definition name="showResponseForm.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Crear Folio" />
+        <put-attribute name="body" value="/WEB-INF/paginas/createTicketResponse.jsp" />
+    </definition>
+    
+</tiles-definitions>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
+	
+	<package name="default" namespace="/" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<default-action-ref name="showLoginForm" />
+		
+		<action name="showLoginForm" method="showLoginForm" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success">/login.jsp</result>
+		</action>
+		
+		<action name="login" method="loginUsuario" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.LoginAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+            	<param name="namespace">/socios</param>
+			</result>
+			<result name="input">showLoginForm</result>
+			<result name="not-found">/login.jsp</result>
+			<result name="error">/error.jsp</result>	
+		</action>
+	</package>
+	
+	
+	
+	
+	
+	<package name="socios" namespace="/socios" extends="struts-default">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<action name="showRegisterForm" method="showRegisterForm" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="tiles">altaUsuario.tiles</result>
+		</action>
+		
+		<action name="createTicket" method="showCreateTicket" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="tiles">crearTicket.tiles</result>
+		</action>
+		
+		<action name="registro" method="registroUsuario" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.RegistroAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+			</result>
+		</action>
+		
+		<action name="registroFolio" method="registroFolio" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.RegistroFolio">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+			</result>
+		</action>
+		
+		<action name="createResponse" method="showResponseTicket" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="tiles">showResponseForm.tiles</result>
+		</action>
+		
+		<action name="finalizarFolio" method="finalizar" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.CambioEstadoAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+			</result>
+		</action>
+		
+		<action name="showInicio" method="showFoliosForm" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="tiles">menuFolios.tiles</result>
+		</action>
+		
+		<action name="showDetail" method="showFoliosDetailForm" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="tiles">menuFoliosDetalles.tiles</result>
+		</action>
+		
+		<action name="logout" method="logoutUsuario" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.LoginAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showLoginForm</param>
+            	<param name="namespace">/</param>
+			</result>
+		</action>
+		
+		<action name="showCambioPasswdForm" method="showChangePasswordForm" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="tiles">cambiopassword.tiles</result>
+		</action>
+		
+		<action name="cpasswd" method="cambiarPassword" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.CambioPasswdAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+			</result>
+			<result name="passwd-no-cambiado" type="tiles">home.tiles</result>
+			<result name="input" type="tiles">cambiopassword.tiles</result>
+		</action>
+		
+		<action name="showMenuFolios" method="showFoliosForm" 
+			class="mx.smithseguros.ComunicacionSmith.web.action.MostrarFormasAction">
+			<result name="success" type="redirectAction">
+				<param name="actionName">showInicio</param>
+			</result>
+		</action>
+	</package>
+</struts>
